@@ -11,10 +11,15 @@ export class Snack {
         this.imgUrl = data.imgUrl
     }
 
-    get SnacksButton() {
+    get snackCardTemplate() {
         return `
-   <div class=" p-2 d-flex justify-content-center">
-   <button class="btn btn-secondary rounded-circle col-2 p-2 text-center border border-dark border-1 shadow"</button></div>`
+   <div class="card col-12">
+   <div class="card-body">
+					<span class="row">
+						<h5 class="card-title">${this.name}</h5>
+						<p class="card-text">$${this.price}</p>
+					</span>
+   </div>`
     }
 
 }
